@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Meteo</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<div th:insert = "~{fragment :: NavBar}"> </div>
+	</head>
+	<body>
+		<ul th:each ="Adresse: ${Adresse}">
+			<li th:text ="${Adresse}"/>
+		</ul>
+		</ul >
+		<ul th:each ="ville: ${ville}">
+			<li th:text ="${ville}" />
+		</ul >
+		<h1>longitude</h1>
+		<ul th:each ="longitude: ${longitude}">
+			
+			<li th:text ="${longitude}" />
+		</ul >
+		<h1>latitude</h1>
+		<ul th:each ="latitude: ${latitude}">
+			<li th:text ="${latitude}" />
+		</ul >
+		<ul th:each ="meteo: ${meteo}">
+			<li th:text ="${meteo.currently.summary}" />
+			<li th:text ="${meteo.currently.temperature}" <p>°C</p> />
+		</ul >
+	</body>
+</html>

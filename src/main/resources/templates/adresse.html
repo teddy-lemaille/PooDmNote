@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title>Adresse</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+		<div th:insert = "~{fragment :: NavBar}"> </div>
+	</head>
+	<body>
+		<h1>Saisie adresse </h1>
+		<form action="/meteo" method="post">
+	   		<div>
+		        <label for="Adresse">Adresse :</label>
+		        <input type="text" id="Adresse" name="Adresse">
+	    	</div>
+    	    <div class="button">
+       			<button type="submit">Envoyer</button>
+   			</div>
+    	</form>
+	</body>
+</html>
